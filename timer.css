@@ -1,0 +1,71 @@
+h1 {
+	letter-spacing: 10px;
+}
+body {
+	background-color: #282e3a;
+	color: white;
+	text-align: center;
+	font-family: tahoma;
+}
+
+#clock {
+	padding: 20px;
+}
+
+#clock span {
+	display: inline-block;
+	margin-right: 2%;
+	margin-left: 2%;*/
+	float: left;
+	width: 110px;
+	line-height: 100px;
+	border-radius: 15px;
+	background-color: skyblue;
+	font-size: 50px;
+	letter-spacing: 2px;
+	text-align: center;
+}
+
+#clock span:nth-child(1) {
+	background: #fa5559;
+}
+
+#clock span:nth-child(2) {
+	background: #26c2b9;
+}
+
+#clock span:nth-child(3) {
+	background: #f6bc58;
+}
+
+#clock span:nth-child(4) {
+	background: #2dcb74;
+}
+#units {
+	padding: 20px;
+
+}
+#units span {
+	display: inline-block;
+	margin-right: 2%;
+	margin-left: 2%;
+	width: 110px;
+	font-size: 12px;
+	text-align: center;
+	letter-spacing: 4px;
+}
+
+button {
+	border-radius: 5px;
+	padding: 5px 15px 5px 15px;
+	letter-spacing: 3px;
+	cursor: pointer;
+	border: 0 none;
+	margin-top: 35px;
+	outline: none;
+	text-align: center;
+}
+
+button:hover {
+	opacity: 0.5;
+}
