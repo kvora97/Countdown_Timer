@@ -1,6 +1,6 @@
 h1 {
-	letter-spacing: 10px;
-	size: 150%;
+	padding: 10px;
+	letter-spacing: 12px;
 }
 body {
 	background-color: #282e3a;
@@ -9,13 +9,11 @@ body {
 	font-family: tahoma;
 }
 
-
 #inputs {
 	padding: 20px;
 }
 
 #inputs input {
-	display: inline-block;
 	margin-right: 2%;
 	margin-left: 2%;*/
 	float: left;
@@ -45,14 +43,20 @@ body {
 	background: #2dcb74;
 }
 
+#inputs input::placeholder {
+	color: white;
+}
+
+
+/*
 #clock {
-	padding: 20px;
+	padding-top: 20px;
 }
 
 #clock span {
-	display: none;
+	display: inline-block;
 	margin-right: 2%;
-	margin-left: 2%;*/
+	margin-left: 2%;
 	float: left;
 	width: 110px;
 	line-height: 100px;
@@ -77,6 +81,7 @@ body {
 #clock span:nth-child(4) {
 	background: #2dcb74;
 }
+*/
 
 #units {
 	padding: 20px;
