@@ -12,12 +12,20 @@
 
 		<h1>TIME LEFT</h1>
 		
+		<div id="inputs">
+			<input type="text" name="" id="days">
+			<input type="text" name="" id="hours">
+			<input type="text" name="" id="minutes">
+			<input type="text" name="" id="seconds">
+		</div>
+
 		<div id="clock">
 			<span>0</span>
 			<span>0</span>
 			<span>0</span>
 			<span>0</span>
 		</div>
+
 		<div id="units">
 			<span>DAYS</span>
 			<span>HOURS</span>
@@ -27,7 +35,9 @@
 
 	</div>
 
-	<button id="button">START</button>
+	<button onclick="storeInputs()" id="button">START</button>
+
+	<div id="timeup">TIME UP!</div>
 
 </body>
 </html>
