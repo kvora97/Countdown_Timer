@@ -61,7 +61,23 @@ body {
 	letter-spacing: 4px;
 }
 
-button {
+#startbutton {
+	border-radius: 5px;
+	padding: 10px 20px 10px 20px;
+	font-size: 20px;
+	letter-spacing: 3px;
+	cursor: pointer;
+	border: 0 none;
+	margin-top: 35px;
+	outline: none;
+	text-align: center;
+	vertical-align: middle;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+#resetbutton {
+	display: none;
 	border-radius: 5px;
 	padding: 10px 20px 10px 20px;
 	font-size: 20px;
@@ -78,13 +94,4 @@ button {
 
 button:hover {
 	opacity: 0.5;
-}
-
-#timeup {
-	display: none;
-	padding: 5px 10px 5px 10px;
-	letter-spacing: 3px;
-	margin-left: 25%;
-	margin-right: 25%;
-	font-size: 20px;
 }

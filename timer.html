@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>COUNTDOWM TIMER</title>
+	<title>TIMER</title>
 	<link rel="stylesheet" type="text/css" href="timer.css"></link>
 	<script type="text/javascript" src="timer.js"></script>
 </head>
@@ -28,9 +28,11 @@
 
 	</div>
 
-	<button onclick="storeInputs()" id="button">START</button>
+	<button onclick="storeInputs(); toggle();" id="startbutton">
+		START
+	</button>
 
-	<div id="timeup">TIME UP!</div>
+	<button onclick="reset()" id="resetbutton">RESET</button>
 
 </body>
 </html>

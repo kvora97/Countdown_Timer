@@ -1,22 +1,38 @@
-var ts, total_seconds, days, hours, minutes, seconds, timer;
+var days, hours, minutes, seconds, timer;
+var ts, remaining_seconds, total_seconds;
 var reset_clicked = false;
+var pause_clicked = false;
+
+function toggle()
+{
+	if (!pause_clicked)
+	{
+		document.getElementById("startbutton").innerHTML = "PAUSE";
+		pause_clicked = true;
+	}
+	else
+	{
+		document.getElementById("startbutton").innerHTML = "START";
+		pause_clicked = false;
+	}	
+}
 
 function reset()
 {
-	console.log("ENTERED RESET");
-
 	reset_clicked = true;
-	days = hours = minutes = seconds = 0;
+	pause_clicked = false;
+	ts = total_seconds = tdays = hours = minutes = seconds = 0;
 	
-	document.getElementById("button").innerHTML = "START";
-	
+	toggle();
+
 	document.getElementById("days").value = days;
 	document.getElementById("hours").value = hours;
 	document.getElementById("minutes").value = minutes;
 	document.getElementById("seconds").value = seconds;
 
-	document.removeEventListener("click", reset, false);
-	document.addEventListener("click", storeInputs, true);
+	document.getElementById("resetbutton").style.display = "none";
+	document.getElementById("startbutton").innerHTML = "START";
+	document.getElementById("startbutton").style.color = "black";
 }
 
 function startTimer()
@@ -24,6 +40,11 @@ function startTimer()
 	if (total_seconds == 0)
 	{
 		clearInterval(timer);
+		if (!reset_clicked)
+		{	
+			document.getElementById("startbutton").innerHTML = "TIME UP!";
+			document.getElementById("startbutton").style.color = "red";
+		}
 	}
 
 	ts = total_seconds;
@@ -44,17 +65,15 @@ function startTimer()
 	document.getElementById("hours").value = hours;
 	document.getElementById("minutes").value = minutes;
 	document.getElementById("seconds").value = seconds;
-	
-	total_seconds--;
 
-	console.log(days);
-	console.log(hours);
-	console.log(minutes);
-	console.log(seconds);
+	total_seconds--;
 }
 
 function storeInputs() 
 {
+	reset_clicked = false;
+	pause_clicked = false;
+
 	// get inputs from each field
 	days = document.getElementById("days").value;
 	if (isNaN(days)) {
@@ -96,20 +115,8 @@ function storeInputs()
 		document.getElementById("seconds").value = seconds;
 	}
 
-	if (!reset_clicked)
-	{
-		document.getElementById("button").innerHTML = "RESET";
-	}
-	else
-	{
-		document.getElementById("button").innerHTML = "START";
-		reset_clicked = false;
-	}
-
-	document.removeEventListener("click", storeInputs, false);
-	document.addEventListener("click", reset, true);
+	document.getElementById("resetbutton").style.display = "inline-block";
 
 	total_seconds = (1 * seconds) + (60 * minutes) + (60 * 60 * hours) + (60 * 60 * 24 * days);
-	console.log("total seconds " + total_seconds) ;
 	timer = setInterval(startTimer, 0);
 }
