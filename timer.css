@@ -47,42 +47,6 @@ body {
 	color: white;
 }
 
-
-/*
-#clock {
-	padding-top: 20px;
-}
-
-#clock span {
-	display: inline-block;
-	margin-right: 2%;
-	margin-left: 2%;
-	float: left;
-	width: 110px;
-	line-height: 100px;
-	border-radius: 15px;
-	font-size: 50px;
-	letter-spacing: 2px;
-	text-align: center;
-}
-
-#clock span:nth-child(1) {
-	background: #fa5559;
-}
-
-#clock span:nth-child(2) {
-	background: #26c2b9;
-}
-
-#clock span:nth-child(3) {
-	background: #f6bc58;
-}
-
-#clock span:nth-child(4) {
-	background: #2dcb74;
-}
-*/
-
 #units {
 	padding: 20px;
 
